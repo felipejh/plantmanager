@@ -18,6 +18,13 @@ Este projeto foi criado com o Node versão 12.x.
 ## Expo CLI
 Este projeto foi criado com o [Expo CLI](https://expo.io/). É necessário tê-lo instalado em seu computador.
 
+## JSON-SERVER
+Necessário instalar de forma global para rodar uma API fictícia.
+Instale com o comando
+```
+npm install -g json-server
+```
+
 ## Como rodar o projeto
 
 Para simular dados vindos de uma API e com um *delay*, foi utilizado a lib [json-server](https://github.com/typicode/json-server).
