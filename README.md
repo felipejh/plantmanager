@@ -5,6 +5,13 @@ Ela tem como objetivo alertar o horário de regar as plantas cadastradas atravé
 
 ## Demo
 
+### iOS
+### Live Demo
+![](.github/live-demo-ios.gif)
+
+### Notificação para regar uma planta
+![](.github/screenshot-notification-ios.png)
+
 ### Android
 #### Live demo
 ![](.github/live-demo-android.gif)
