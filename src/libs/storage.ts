@@ -34,7 +34,7 @@ export async function savePlant(plant: PlantProps): Promise<void> {
     if (repeat_every === "week") {
       const interval = Math.trunc(7 / times);
       nextTime.setDate(now.getDate() + interval);
-    } 
+    }
     // else {
     //   nextTime.setDate(nextTime.getDate() + 1);
     // }
@@ -42,6 +42,18 @@ export async function savePlant(plant: PlantProps): Promise<void> {
     const seconds = Math.abs(
       Math.ceil((now.getTime() - nextTime.getTime()) / 1000)
     );
+
+    const settings = await Notifications.getPermissionsAsync();
+    if (!settings.granted) {
+      await Notifications.requestPermissionsAsync({
+        ios: {
+          allowAlert: true,
+          allowBadge: true,
+          allowSound: true,
+          allowAnnouncements: true,
+        },
+      });
+    }
 
     const notificationId = await Notifications.scheduleNotificationAsync({
       content: {
